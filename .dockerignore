@@ -1,0 +1,7 @@
+.env
+.git
+node_modules
+data
+backups
+*.zip
+*.sqlite*
