@@ -1,0 +1,8 @@
+{$DOMAIN} {
+    encode zstd gzip
+    reverse_proxy app:3000 {
+        header_up X-Real-IP {remote_host}
+        header_up -oai-authenticated-user-id
+        header_up -oai-authenticated-user-email
+    }
+}
